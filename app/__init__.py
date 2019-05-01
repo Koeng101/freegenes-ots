@@ -21,7 +21,7 @@ authorizations = {
 API_TITLE = os.environ['API_TITLE']
 API_DESCRIPTION = os.environ['API_DESCRIPTION']
 
-api = Api(app, version='1.1', title=API_TITLE,
+api = Api(app, version='.1', title=API_TITLE,
             description=API_DESCRIPTION,
             authorizations=authorizations
             )

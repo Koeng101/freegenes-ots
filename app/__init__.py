@@ -5,7 +5,7 @@ from flask_restplus import Api, Resource, fields, Namespace
 
 from flask_cors import CORS
 import requests
-
+import os
 from .otstamp import TimeStamp
 
 app = Flask(__name__)
@@ -17,8 +17,9 @@ authorizations = {
             'in': 'header',
             'name': 'token'}
         }
-API_TITLE = 'Test'
-API_DESCRIPTION = 'Test test'
+
+API_TITLE = os.environ['API_TITLE']
+API_DESCRIPTION = os.environ['API_DESCRIPTION']
 
 api = Api(app, version='1.1', title=API_TITLE,
             description=API_DESCRIPTION,
